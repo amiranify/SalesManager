@@ -14,21 +14,21 @@ public class SalesManager {
         }
         return max;
     }
-    public int min() {
-        int min = Integer.MAX_VALUE;
-        for (int sale : sales) {
+    public long min() {
+        long min = Integer.MAX_VALUE;
+        for (long sale : sales) {
             if (sale < min) {
                 min = sale;
             }
         }
         return min;
     }
-    public int cropAverage() {
-        int sum = 0;
+    public long cropAverage() {
+        long sum = 0;
         for (int i = 0; i < sales.length; i++) {
             sum += sales[i];
         }
-        int cropAverage = (sum - (max() + min())) / (sales.length - 2);
+        long cropAverage = (sum - (max() + min())) / (sales.length - 2);
         return cropAverage;
     }
 
